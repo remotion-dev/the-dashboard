@@ -8,7 +8,7 @@ export const useCompany = (): Company => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCompany((c) => (c === "remotion" ? "foronered" : "remotion"));
-    }, 1000 * 5 * 60);
+    }, 1000 * 2 * 60);
 
     return () => {
       clearInterval(interval);
