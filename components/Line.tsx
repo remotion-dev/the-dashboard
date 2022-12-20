@@ -9,6 +9,7 @@ export const Line: React.FC = () => {
         height: 10,
         backgroundImage: `linear-gradient(to right, ${theme.color}, transparent)`,
         marginTop: 10,
+        marginBottom: 20,
       }}
     ></div>
   );

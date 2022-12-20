@@ -3,6 +3,8 @@ import { useTheme } from "./theme";
 import { Header } from "./Header";
 import { Line } from "./Line";
 import { Ticker } from "./Ticker";
+import { Lunch } from "./Lunch";
+import { Eotm } from "./Eotm";
 
 export default function Home() {
   const theme = useTheme();
@@ -30,7 +32,6 @@ export default function Home() {
         >
           <div
             style={{
-              flex: 1,
               paddingLeft: 24,
               paddingRight: 24,
             }}
@@ -41,8 +42,24 @@ export default function Home() {
           <div
             style={{
               flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
             }}
-          ></div>
+          >
+            <div
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                paddingLeft: 24,
+                paddingRight: 24,
+                display: "flex",
+              }}
+            >
+              <Eotm></Eotm>
+              <div style={{ width: 20 }}></div>
+              <Lunch></Lunch>
+            </div>
+          </div>
           <Ticker></Ticker>
         </div>
       </div>
