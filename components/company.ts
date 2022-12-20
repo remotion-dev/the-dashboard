@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 type Company = "foronered" | "remotion";
 
 export const useCompany = (): Company => {
-  const [company, setCompany] = useState<Company>("foronered");
+  const [company, setCompany] = useState<Company>("remotion");
 
   useEffect(() => {
     const interval = setInterval(() => {
