@@ -16,7 +16,7 @@ export const Time: React.FC = () => {
     <div>
       {time.getHours()}
       <span>:</span>
-      {time.getMinutes()}
+      {time.getMinutes().toString().padStart(2, "0")}
     </div>
   );
 };
