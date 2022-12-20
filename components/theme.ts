@@ -20,11 +20,11 @@ const getTheme = () => {
 };
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<Theme>(lightTheme);
+  const [theme, setTheme] = useState<Theme>(() => getTheme());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTheme(lightTheme);
+      setTheme(getTheme());
     }, 1000 * 5);
 
     return () => {
