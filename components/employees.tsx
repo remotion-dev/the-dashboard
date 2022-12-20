@@ -13,3 +13,14 @@ export const forOneRedEmployees: Employee[] = [
   { name: "Luisa Stückelberger", picture: "luisa.jpg" },
   { name: "Jakob Dhondt", picture: "jakob.jpeg" },
 ];
+
+export const remotionEmployees: Employee[] = [
+  { name: "Jonny Burger", picture: "jonny.png" },
+  { name: "Mehmet Ademi", picture: "mehmet.png" },
+  { name: "Patric Salvisberg", picture: "patric.png" },
+];
+
+export const lunchRoulette: Employee[] = [
+  ...forOneRedEmployees,
+  ...remotionEmployees,
+];

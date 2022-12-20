@@ -5,6 +5,7 @@ import { Line } from "./Line";
 import { Ticker } from "./Ticker";
 import { Lunch } from "./Lunch";
 import { Eotm } from "./Eotm";
+import { LunchMandate } from "./LunchMandate";
 
 export default function Home() {
   const theme = useTheme();
@@ -53,6 +54,7 @@ export default function Home() {
                 paddingLeft: 24,
                 paddingRight: 24,
                 display: "flex",
+                height: "100%",
               }}
             >
               <Eotm></Eotm>
@@ -60,6 +62,29 @@ export default function Home() {
               <Lunch></Lunch>
             </div>
           </div>
+          <div style={{ height: 20 }}></div>
+          <div
+            style={{
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+            }}
+          >
+            <div
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                paddingLeft: 24,
+                paddingRight: 24,
+                display: "flex",
+                height: "100%",
+              }}
+            >
+              <LunchMandate></LunchMandate>
+              <div style={{ width: 20 }}></div>
+            </div>
+          </div>
+          <div style={{ height: 20 }}></div>
           <Ticker></Ticker>
         </div>
       </div>

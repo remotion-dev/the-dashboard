@@ -25,8 +25,8 @@ export const Eotm: React.FC = () => {
     >
       <img
         style={{
-          height: 150,
-          width: 150,
+          height: 200,
+          width: 200,
           float: "left",
           filter: "grayscale(100%)",
           marginRight: 20,
