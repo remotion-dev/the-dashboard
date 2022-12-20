@@ -41,6 +41,8 @@ export const Eotm: React.FC = () => {
           year: "numeric",
         }).format(new Date(date))}
       </h3>
+      <br></br>
+      <p>{randomEmployee.employeeOfTheMonth}</p>
     </div>
   );
 };
