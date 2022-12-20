@@ -40,8 +40,11 @@ export const LunchMandate = () => {
         <div>
           <strong> has been delegated to pick up lunch today.</strong>
         </div>{" "}
-        <br></br> Deputies: {lunchMandate[1].name.split(" ")[0]},{" "}
-        {lunchMandate[2].name.split(" ")[0]}.
+        <br></br>
+        {lunchMandate[1].name.split(" ")[0]}
+        {" and "}
+        {lunchMandate[2].name.split(" ")[0]} have been nominated as deputies.
+        Congrats!
       </div>
     </div>
   );

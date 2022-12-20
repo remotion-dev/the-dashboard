@@ -848,10 +848,6 @@ export const entrepreneurQuotes = [
     from: "Michael Gerber",
   },
   {
-    text: "If you want to be inventive",
-    from: "you have to be willing to fail.”",
-  },
-  {
     text: "The challenge is not just to build a company that can endure; but to build one that is worthy of enduring.",
     from: "Jim Collins",
   },

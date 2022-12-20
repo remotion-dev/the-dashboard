@@ -8,7 +8,9 @@ export const DailyMotivation = () => {
   const theme = useTheme();
 
   const quote =
-    entrepreneurQuotes[Math.floor(random(date) * entrepreneurQuotes.length)];
+    entrepreneurQuotes[
+      Math.floor(random(date + "seed") * entrepreneurQuotes.length)
+    ];
 
   return (
     <div
@@ -16,9 +18,11 @@ export const DailyMotivation = () => {
         background: theme.color,
         color: theme.background,
         padding: 16,
+        flex: 1,
       }}
     >
       <img src="/light.png" style={{ height: 80, float: "left" }}></img>
+      <h3>INSIGHT OF THE DAY</h3>
       <p
         style={{
           fontFamily: "serif",

@@ -1,0 +1,16 @@
+export const bossQuotes = [
+  "Let's make this project the best it can be, or at least better than Bob's team's project down the hall.",
+  "I know we're behind schedule, but let's not waste any more time talking about it. Just get it done.",
+  "I know we're under a lot of pressure to meet this deadline, but remember, the only thing that's impossible is a rhinoceros trying to juggle.",
+  "I don't care how you do it, just get it done. If you need to hire a team of monkeys to type the report, go for it.",
+  "I know this project is a little outside our comfort zone, but hey, if we succeed, we'll be the talk of the industry!",
+  "I know we're facing some tough challenges, but remember, we're like a slinky. We may not be much to look at, but we always find a way to get things done.",
+  "I know this project is going to be a lot of hard work, but think of it as a marathon, not a sprint. And remember, the finish line is a cold beer and a warm couch.",
+  "I know we're under a tight deadline, but remember, we're like a rubber band. We may stretch and bend, but we always bounce back.",
+  "I know this project is going to be a lot of hard work, but remember, we're like a team of superheroes. We may have our ups and downs, but we always come out on top.",
+  "I know we're facing some tough challenges, but remember, we're like a pack of wild animals. We may not always be the biggest or strongest, but we always find a way to survive and thrive.",
+  "I know this project is going to be a lot of hard work, but remember, we're like a team of pirates. We may not always have a clear map, but we always find a way to make it to our treasure.",
+  "I know we're under a lot of pressure to meet this deadline, but remember, we're like a team of ninja warriors. We may face obstacles, but we always find a way to overcome them.",
+  "I know we're facing some tough challenges, but remember, we're like a Lego set. We may have a lot of different pieces, but when we work together, we can build anything.",
+  "I know this project is going to be a lot of hard work, but remember, we're like a puzzle. We may have a lot of pieces to fit together, but when we do, we create something beautiful.",
+];

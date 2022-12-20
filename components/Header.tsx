@@ -13,7 +13,8 @@ export const Header = () => {
         flexDirection: "row",
       }}
     >
-      <div>Welcome to For One Red Corporation!</div>
+      <img src="/logo.png" style={{ height: 30, marginTop: 0 }}></img>
+      <p>Welcome to For One Red Corporation!</p>
       <div style={{ flex: 1 }}></div>
       <Time></Time>
     </div>
