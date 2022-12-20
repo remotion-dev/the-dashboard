@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import { useCompany } from "./company";
 import { useDate } from "./use-date";
 
 const item: React.CSSProperties = {
@@ -11,6 +12,7 @@ const item: React.CSSProperties = {
 export const Menu: React.FC = () => {
   const date = useDate();
   const dayOfWeek = new Date(date).getDay();
+  const company = useCompany();
 
   if (dayOfWeek === 5) {
     return (
@@ -18,13 +20,6 @@ export const Menu: React.FC = () => {
         <h3>Fresh Fridays</h3>
         <p style={item}>A new taste adventure every week! </p>
         <br></br>
-        <p
-          style={{
-            textAlign: "right",
-          }}
-        >
-          <b>0.00</b>
-        </p>
       </div>
     );
   }
@@ -44,7 +39,7 @@ export const Menu: React.FC = () => {
             textAlign: "right",
           }}
         >
-          <b>0.00</b>
+          <b>{company === "foronered" ? "0.00" : "14.50"}</b>
         </p>
       </div>
     );
@@ -64,7 +59,7 @@ export const Menu: React.FC = () => {
             textAlign: "right",
           }}
         >
-          <b>0.00</b>
+          <b>{company === "foronered" ? "0.00" : "18.50"}</b>
         </p>
       </div>
     );
@@ -86,7 +81,7 @@ export const Menu: React.FC = () => {
             textAlign: "right",
           }}
         >
-          <b>0.00</b>
+          <b>{company === "foronered" ? "0.00" : "15.50"}</b>
         </p>
       </div>
     );
@@ -110,7 +105,7 @@ export const Menu: React.FC = () => {
             textAlign: "right",
           }}
         >
-          <b>0.00</b>
+          <b>{company === "foronered" ? "0.00" : "20.50"}</b>
         </p>
       </div>
     );
