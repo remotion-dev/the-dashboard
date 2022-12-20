@@ -162,11 +162,6 @@ export const quotes: Quote[] = [
   },
   {
     quote:
-      "Ask and it will be given to you; search, and you will find; knock and the door will be opened for you.",
-    author: "Jesus",
-  },
-  {
-    quote:
       "The only person you are destined to become is the person you decide to be.",
     author: "Ralph Waldo Emerson",
   },

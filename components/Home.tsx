@@ -10,6 +10,7 @@ import { DailyMotivation } from "./DailyMotivation";
 import { CorporateAnnouncements } from "./CorporateAnnouncements";
 import { Unwrapped } from "./Unwrapped";
 import { useCompany } from "./company";
+import { Stocks } from "./Stocks";
 
 export default function Home() {
   const theme = useTheme();
@@ -64,6 +65,19 @@ export default function Home() {
               }}
             >
               <Eotm></Eotm>
+              <div style={{ width: 20 }}></div>
+              <div
+                style={{
+                  flex: 1,
+                  flexDirection: "column",
+                  height: "100%",
+                  display: "flex",
+                }}
+              >
+                <Stocks type="sp500"></Stocks>
+                <div style={{ height: 20 }}></div>
+                <Stocks type="nasdaq"></Stocks>
+              </div>
               <div style={{ width: 20 }}></div>
               <Lunch></Lunch>
             </div>

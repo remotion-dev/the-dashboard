@@ -48,7 +48,7 @@ export const Menu: React.FC = () => {
     return (
       <div>
         <h3>"Fu Lin"</h3>
-        <p style={item}>Experience the flavors of China in a cozy setting</p>
+        <p style={item}>Experience the flavors of China</p>
         <br></br>
         <ul style={{ marginLeft: 20 }}>
           <li style={item}>Authentic Tofu and rice dishes</li>
