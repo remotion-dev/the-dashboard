@@ -1,5 +1,19 @@
+import { useEffect, useState } from "react";
+
 type Company = "foronered" | "remotion";
 
 export const useCompany = (): Company => {
-  return "remotion";
+  const [company, setCompany] = useState<Company>("foronered");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCompany((c) => (c === "remotion" ? "foronered" : "remotion"));
+    }, 1000 * 5 * 60);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
+
+  return company;
 };
