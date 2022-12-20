@@ -1,4 +1,5 @@
 import { random } from "remotion";
+import { useCompany } from "./company";
 import { lunchRoulette } from "./employees";
 import { useTheme } from "./theme";
 import { useDate } from "./use-date";
@@ -6,6 +7,7 @@ import { useDate } from "./use-date";
 export const LunchMandate = () => {
   const date = useDate();
   const theme = useTheme();
+  const company = useCompany();
 
   const lunchMandate = lunchRoulette.sort((a, b) => {
     return random(date + a.name) - random(date + b.name);
@@ -14,10 +16,10 @@ export const LunchMandate = () => {
   const taglines = [
     "We trust in",
     "What an honor!",
-    "We have a winner!",
     "We have nominated:",
+    "We have a winner!",
   ].sort((a, b) => {
-    return random(date + a) - random(date + b);
+    return random(date + a + company) - random(date + company + b);
   });
 
   return (
