@@ -3,6 +3,7 @@ import { useTheme } from "./theme";
 import { Quote, quotes } from "./quotes";
 import { random } from "remotion";
 import { useDate } from "./use-date";
+import { useCompany } from "./company";
 
 const randomMessages = [
   "Please don't leave your empty coffee cups on the table",
@@ -36,6 +37,7 @@ const randomMessages = [
 export const Ticker: React.FC = () => {
   const theme = useTheme();
   const date = useDate();
+  const company = useCompany();
 
   const tickerItems = useMemo(
     () =>
@@ -50,8 +52,8 @@ export const Ticker: React.FC = () => {
         ...randomMessages
           .sort((q, b) => random(q + date + "hi") - random(b + date + "hi"))
           .slice(0, 10),
-      ].sort((q, b) => random(q + date) - random(b + date)),
-    [date]
+      ].sort((q, b) => random(q + date + company) - random(b + date + company)),
+    [company, date]
   );
 
   return (
