@@ -9,8 +9,7 @@ const item: React.CSSProperties = {
 
 export const Menu: React.FC = () => {
   const date = useDate();
-  //   const dayOfWeek = new Date(date).getDay();
-  const dayOfWeek = 5 as number;
+  const dayOfWeek = new Date(date).getDay();
 
   if (dayOfWeek === 5) {
     return (
@@ -76,7 +75,7 @@ export const Menu: React.FC = () => {
         <p style={item}>Delicious pasta dishes from all over the world!</p>
         <br></br>
 
-        <ul>
+        <ul style={{ marginLeft: 20 }}>
           <li style={item}>Penne Urs</li>
           <li style={item}>Spaghetti Hansueli</li>
           <li style={item}>Risotto Julia</li>
@@ -91,4 +90,30 @@ export const Menu: React.FC = () => {
       </div>
     );
   }
+  if (dayOfWeek === 1) {
+    return (
+      <div>
+        <h3>"Roots of Himalaya"</h3>
+        <p style={item}>
+          Authentic Tibetan momos, straight from the roof of the world!
+        </p>
+        <br></br>
+
+        <ul style={{ marginLeft: 20 }}>
+          <li style={item}>Beef</li>
+          <li style={item}>Gruyère and Spinach (Vegetarian)</li>
+          <li style={item}>Soja and cabbage (Vegan)</li>
+        </ul>
+        <p
+          style={{
+            textAlign: "right",
+          }}
+        >
+          <b>0.00</b>
+        </p>
+      </div>
+    );
+  }
+
+  return null;
 };
