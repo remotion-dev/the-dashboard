@@ -32,6 +32,8 @@ export const Ticker: React.FC = () => {
         lineHeight: "50px",
       }}
     >
+      {/**
+       * @ts-expect-error */}
       <marquee
         style={{
           color: theme.background,
@@ -50,6 +52,8 @@ export const Ticker: React.FC = () => {
             </div>
           );
         })}
+        {/**
+         * @ts-expect-error */}
       </marquee>
     </div>
   );
