@@ -6,6 +6,7 @@ import { Ticker } from "./Ticker";
 import { Lunch } from "./Lunch";
 import { Eotm } from "./Eotm";
 import { LunchMandate } from "./LunchMandate";
+import { DailyMotivation } from "./DailyMotivation";
 
 export default function Home() {
   const theme = useTheme();
@@ -82,6 +83,7 @@ export default function Home() {
             >
               <LunchMandate></LunchMandate>
               <div style={{ width: 20 }}></div>
+              <DailyMotivation></DailyMotivation>
             </div>
           </div>
           <div style={{ height: 20 }}></div>
