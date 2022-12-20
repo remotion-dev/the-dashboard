@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useTheme } from "../pages/theme";
+import { useTheme } from "./theme";
 import { Header } from "./Header";
 import { Line } from "./Line";
 import { Ticker } from "./Ticker";

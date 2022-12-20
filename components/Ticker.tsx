@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useTheme } from "../pages/theme";
+import { useTheme } from "./theme";
 import { Quote, quotes } from "./quotes";
 import sample from "lodash/sample";
 import { random } from "remotion";

@@ -1,4 +1,4 @@
-import { useTheme } from "../pages/theme";
+import { useTheme } from "./theme";
 import { Time } from "./Time";
 
 export const Header = () => {
