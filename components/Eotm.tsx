@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { random } from "remotion";
-import { forOneRedEmployees } from "./employees";
+import { useCompany } from "./company";
+import { forOneRedEmployees, remotionEmployees } from "./employees";
 import { useTheme } from "./theme";
 import { useDate } from "./use-date";
 
@@ -9,15 +10,17 @@ export const Eotm: React.FC = () => {
   const theme = useTheme();
   const date = useDate();
   const month = date.substring(5, 7);
+  const company = useCompany();
 
-  const randomEmployee =
-    forOneRedEmployees[Math.floor(random(month) * forOneRedEmployees.length)];
+  const arr = company === "foronered" ? forOneRedEmployees : remotionEmployees;
+
+  const randomEmployee = arr[Math.floor(random(month) * arr.length)];
 
   return (
     <div
       style={{
         border: "4px solid #000",
-        background: "white",
+        background: theme.background,
         flex: 2,
         color: theme.color,
         padding: 12,

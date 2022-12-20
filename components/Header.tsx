@@ -1,8 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
+import { useCompany } from "./company";
 import { useTheme } from "./theme";
 import { Time } from "./Time";
 
 export const Header = () => {
   const theme = useTheme();
+  const company = useCompany();
+
   return (
     <div
       style={{
@@ -13,8 +17,10 @@ export const Header = () => {
         flexDirection: "row",
       }}
     >
-      <img src="/logo.png" style={{ height: 30, marginTop: 0 }}></img>
-      <p>Welcome to For One Red Corporation!</p>
+      <p>
+        Welcome to {company === "foronered" ? "For One Red" : "The Remotion"}{" "}
+        Corporation!
+      </p>
       <div style={{ flex: 1 }}></div>
       <Time></Time>
     </div>

@@ -8,9 +8,13 @@ import { Eotm } from "./Eotm";
 import { LunchMandate } from "./LunchMandate";
 import { DailyMotivation } from "./DailyMotivation";
 import { CorporateAnnouncements } from "./CorporateAnnouncements";
+import { Unwrapped } from "./Unwrapped";
+import { useCompany } from "./company";
 
 export default function Home() {
   const theme = useTheme();
+  const company = useCompany();
+
   return (
     <>
       <div>
@@ -84,7 +88,11 @@ export default function Home() {
             >
               <LunchMandate></LunchMandate>
               <div style={{ width: 20 }}></div>
-              <DailyMotivation></DailyMotivation>
+              {company === "foronered" ? (
+                <DailyMotivation></DailyMotivation>
+              ) : (
+                <Unwrapped></Unwrapped>
+              )}
               <div style={{ width: 20 }}></div>
               <CorporateAnnouncements></CorporateAnnouncements>
             </div>
