@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "./theme";
 
 export const Stocks: React.FC<{
-  type: "nasdaq" | "sp500";
+  type: "bitcoin" | "sp500";
 }> = ({ type }) => {
   const [price, setPrice] = useState(0);
   const [close, setPrevClose] = useState(0);
   const theme = useTheme();
 
   useEffect(() => {
-    fetch(type === "nasdaq" ? "/api/nasdaq" : "/api/snp")
+    fetch(type === "bitcoin" ? "/api/bitcoin" : "/api/snp")
       .then((res) => res.json())
       .then((res) => {
         setPrice(res.response.chart.result[0].meta.regularMarketPrice);
@@ -37,9 +37,9 @@ export const Stocks: React.FC<{
           fontWeight: "bold",
         }}
       >
-        {type === "sp500" ? "S&P 500" : "Nasdaq 100"}
+        {type === "sp500" ? "S&P 500" : "Bitcoin"}
       </div>
-      <h1 style={{ marginTop: 6 }}>
+      <h1 style={{ marginTop: 6, fontSize: 50 }}>
         {price}{" "}
         <span
           style={{

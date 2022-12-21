@@ -87,7 +87,7 @@ export default function Home() {
               >
                 <Stocks type="sp500"></Stocks>
                 <div style={{ height: 20 }}></div>
-                <Stocks type="nasdaq"></Stocks>
+                <Stocks type="bitcoin"></Stocks>
               </div>
               <div style={{ width: 20 }}></div>
               <Lunch></Lunch>
