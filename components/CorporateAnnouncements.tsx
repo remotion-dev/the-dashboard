@@ -21,6 +21,7 @@ export const CorporateAnnouncements = () => {
           height: 200,
           float: "right",
           filter: "grayscale(100%)",
+          marginLeft: 24,
         }}
         src={company === "foronered" ? "luke2.jpeg" : "jonny.png"}
       ></img>
