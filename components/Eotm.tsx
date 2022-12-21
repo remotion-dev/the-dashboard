@@ -45,7 +45,13 @@ export const Eotm: React.FC = () => {
         }).format(new Date(date))}
       </h3>
       <br></br>
-      <p>{randomEmployee.employeeOfTheMonth}</p>
+      <p
+        style={{
+          fontSize: 24,
+        }}
+      >
+        {randomEmployee.employeeOfTheMonth}
+      </p>
     </div>
   );
 };
