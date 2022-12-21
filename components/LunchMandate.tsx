@@ -28,6 +28,7 @@ export const LunchMandate = () => {
         color: "black",
         background: "#eee",
         padding: 20,
+        fontSize: 18,
       }}
     >
       <em> {taglines[0]}</em>
