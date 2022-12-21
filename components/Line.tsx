@@ -7,7 +7,7 @@ export const Line: React.FC = () => {
     <div
       style={{
         height: 10,
-        backgroundImage: `linear-gradient(to right, ${theme.color}, transparent)`,
+        backgroundImage: `linear-gradient(to right, blue, transparent)`,
         marginTop: 10,
         marginBottom: 20,
       }}

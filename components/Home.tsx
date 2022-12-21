@@ -11,10 +11,21 @@ import { CorporateAnnouncements } from "./CorporateAnnouncements";
 import { Unwrapped } from "./Unwrapped";
 import { useCompany } from "./company";
 import { Stocks } from "./Stocks";
+import { useEffect } from "react";
 
 export default function Home() {
   const theme = useTheme();
   const company = useCompany();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      window.location.reload();
+    }, 4 * 60 * 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <>
