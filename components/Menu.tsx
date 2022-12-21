@@ -47,12 +47,12 @@ export const Menu: React.FC = () => {
   if (dayOfWeek === 3) {
     return (
       <div>
-        <h3>"Fu Lin"</h3>
-        <p style={item}>Experience the flavors of China</p>
+        <h3>"Five Spice"</h3>
+        <p style={item}>Experience the flavors of Thailand</p>
         <br></br>
         <ul style={{ marginLeft: 20 }}>
-          <li style={item}>Authentic Tofu and rice dishes</li>
-          <li style={item}>Satay or Szechuan Art</li>
+          <li style={item}>Gaeng Pia</li>
+          <li style={item}>Pad Thai Tofu</li>
         </ul>
         <p
           style={{

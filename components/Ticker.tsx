@@ -59,10 +59,10 @@ export const Ticker: React.FC = () => {
   return (
     <div
       style={{
-        height: 50,
+        height: 80,
         backgroundColor: theme.color,
         fontWeight: "bold",
-        lineHeight: "50px",
+        lineHeight: "80px",
       }}
     >
       {/**
@@ -70,6 +70,7 @@ export const Ticker: React.FC = () => {
       <marquee
         style={{
           color: theme.background,
+          fontSize: 24,
         }}
       >
         {tickerItems.map((q) => {
