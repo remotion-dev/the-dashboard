@@ -32,6 +32,9 @@ const randomMessages = [
   "Update your calendar and schedule regularly to ensure that you are aware of all upcoming deadlines and meetings.",
   "Always double-check your work before submitting it.",
   "Be open to feedback and use it as an opportunity to improve and grow.",
+  "Tip: Maintain a good posture to avoid back pain later in your life.",
+  "We beat our Q4 KPIs! Great. Keep it going, crew!",
+  "Let's bulldoze through these issues, guys."
 ];
 
 export const Ticker: React.FC = () => {
