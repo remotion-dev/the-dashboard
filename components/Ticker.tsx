@@ -54,7 +54,7 @@ export const Ticker: React.FC = () => {
           .map((q) => `"${q.quote}" - ${q.author}`),
         ...randomMessages
           .sort((q, b) => random(q + date + "hi") - random(b + date + "hi"))
-          .slice(0, 10),
+          .slice(0, 15),
       ].sort((q, b) => random(q + date + company) - random(b + date + company)),
     [company, date]
   );
