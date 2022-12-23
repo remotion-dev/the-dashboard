@@ -4,6 +4,7 @@ import { Quote, quotes } from "./quotes";
 import { random } from "remotion";
 import { useDate } from "./use-date";
 import { useCompany } from "./company";
+import { useEmployees } from "./use-employees";
 
 const randomMessages = [
   "Please don't leave your empty coffee cups on the table.",
@@ -34,13 +35,22 @@ const randomMessages = [
   "Be open to feedback and use it as an opportunity to improve and grow.",
   "Tip: Maintain a good posture to avoid back pain later in your life.",
   "We beat our Q4 KPIs! Great. Keep it going, crew!",
-  "Let's bulldoze through these issues, guys."
+  "Let's bulldoze through these issues, guys.",
 ];
+
+type Truthy<T> = T extends false | "" | 0 | null | undefined ? never : T;
+function truthy<T>(value: T): value is Truthy<T> {
+  return Boolean(value);
+}
 
 export const Ticker: React.FC = () => {
   const theme = useTheme();
   const date = useDate();
   const company = useCompany();
+  const employees = useEmployees();
+
+  const isFriday = new Date(date).getDay() === 5;
+  const randomEmployee = employees[Math.floor(random(date) * employees.length)];
 
   const tickerItems = useMemo(
     () =>
@@ -55,8 +65,18 @@ export const Ticker: React.FC = () => {
         ...randomMessages
           .sort((q, b) => random(q + date + "hi") - random(b + date + "hi"))
           .slice(0, 15),
-      ].sort((q, b) => random(q + date + company) - random(b + date + company)),
-    [company, date]
+        isFriday ? "Have a great weekend!" : null,
+        isFriday
+          ? `${
+              randomEmployee.name.split(" ")[0]
+            } - would it inconvienience you to come in on Saturday? That would be great.`
+          : null,
+      ]
+        .filter(truthy)
+        .sort(
+          (q, b) => random(q + date + company) - random(b + date + company)
+        ),
+    [company, date, isFriday, randomEmployee.name]
   );
 
   return (
