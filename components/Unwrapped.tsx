@@ -50,7 +50,7 @@ export const Unwrapped = () => {
             marginRight: 10,
           }}
         ></div>
-        LIVE
+        LIVE GITHUB STARS
       </div>
       <div
         style={{
