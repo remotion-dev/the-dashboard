@@ -73,7 +73,7 @@ export const Unwrapped = () => {
 };
 
 export const target = (currentStars: number, date: string) => {
-  return [
+  const lines = [
     `Can we reach ${Math.round(
       currentStars + random(date) * 500
     )} before the end of the month?`,
@@ -85,6 +85,10 @@ export const target = (currentStars: number, date: string) => {
     `Those people are stars!`,
     `So many stars!`,
     `Keep on starring!`,
-    ``,
+    `We shine like laminat flooring!`,
+    `To the moon!`,
+    `We are famous.`,
   ];
+
+  return lines[Math.floor(random(date) * lines.length)];
 };
