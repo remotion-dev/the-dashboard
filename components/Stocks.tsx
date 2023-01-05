@@ -35,11 +35,12 @@ export const Stocks: React.FC<{
       <div
         style={{
           fontWeight: "bold",
+          fontSize: 30,
         }}
       >
         {type === "sp500" ? "S&P 500" : "Bitcoin"}
       </div>
-      <h1 style={{ marginTop: 6, fontSize: 50 }}>
+      <h1 style={{ marginTop: 6, fontSize: 70 }}>
         {price}{" "}
         <span
           style={{
