@@ -1,7 +1,9 @@
+import { useCompany } from "./company";
 import { useTheme } from "./theme";
 
 export const Logo = () => {
   const theme = useTheme();
+  const compan = useCompany();
 
   return (
     <img
@@ -10,7 +12,7 @@ export const Logo = () => {
         filter: theme.logoFilter,
         marginRight: 15,
       }}
-      src="/pyramid.png"
+      src={compan === "remotion" ? "/reactlogo.png" : "/pyramid.png"}
     ></img>
   );
 };
