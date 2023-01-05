@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useCompany } from "./company";
+import { Logo } from "./Logo";
 import { useTheme } from "./theme";
 import { Time } from "./Time";
 
@@ -15,8 +16,10 @@ export const Header = () => {
         fontWeight: "bolder",
         display: "flex",
         flexDirection: "row",
+        alignItems: "center",
       }}
     >
+      <Logo></Logo>
       <p>
         Welcome to {company === "foronered" ? "For One Red" : "The Remotion"}{" "}
         Corporation!

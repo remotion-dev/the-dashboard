@@ -25,18 +25,18 @@ export const Unwrapped = () => {
       style={{
         justifyContent: "center",
         alignItems: "center",
-        fontFamily: "MonaSans",
         backgroundColor: theme.background,
         flex: 1,
         padding: 20,
         border: "3px outset gray",
         color: theme.color,
+        fontFamily: "sans-serif",
       }}
     >
       <div
         style={{
           fontWeight: "bold",
-          fontFamily: "Arial",
+          fontFamily: "sans-serif",
         }}
       >
         LIVE COUNTER

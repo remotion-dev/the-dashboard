@@ -3,16 +3,21 @@ import { use, useEffect, useState } from "react";
 export type Theme = {
   background: string;
   color: string;
+  logoFilter: string;
 };
 
-const darkTheme = { background: "#000", color: "#fff" };
-const lightTheme = { background: "#fff", color: "#000" };
+const darkTheme = {
+  background: "#000",
+  color: "#fff",
+  logoFilter: "invert(100%)",
+};
+const lightTheme = { background: "#fff", color: "#000", logoFilter: "" };
 
 const getTheme = () => {
-  if (new Date().getHours() >= 18) {
+  if (new Date().getHours() >= 17) {
     return darkTheme;
   }
-  if (new Date().getHours() <= 8) {
+  if (new Date().getHours() <= 7) {
     return darkTheme;
   }
 
