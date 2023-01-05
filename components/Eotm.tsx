@@ -47,7 +47,7 @@ export const Eotm: React.FC = () => {
       <br></br>
       <p
         style={{
-          fontSize: 24,
+          fontSize: 36,
         }}
       >
         {randomEmployee.employeeOfTheMonth}

@@ -28,17 +28,34 @@ export const LunchMandate = () => {
         color: "black",
         background: "#eee",
         padding: 20,
-        fontSize: 18,
+        fontSize: 24,
       }}
     >
       <em> {taglines[0]}</em>
-      <h1
+      <div
         style={{
-          marginBottom: 5,
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "flex-end",
         }}
       >
-        {lunchMandate[0].name}
-      </h1>
+        <img
+          style={{
+            height: 150,
+            marginRight: 20,
+          }}
+          src={lunchMandate[0].picture}
+        ></img>
+
+        <h1
+          style={{
+            marginBottom: 5,
+          }}
+        >
+          {lunchMandate[0].name}
+        </h1>
+      </div>
+      <br></br>
       <div>
         <div>
           <strong> has been delegated to pick up lunch today.</strong>
