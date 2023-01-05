@@ -66,7 +66,7 @@ export const remotionEmployees: Employee[] = [
     name: "Mehmet Ademi",
     picture: "mehmet.png",
     employeeOfTheMonth:
-      "Mehmet was named employee of the month for his outstanding contributions to the company as a business developer. He has played a key role in driving the success of the business development team, using his excellent communication and negotiation skills to secure new partnerships and contracts for the company. In addition to his technical skills, Mehmet is known for his ability to build strong relationships with clients and colleagues, and is always willing to go above and beyond to ensure that the team is meeting its goals and objectives. His hard work and dedication have been invaluable to the company, and we are proud to recognize him as our employee of the month.",
+      "Mehmet was named employee of the month for securing the @remotion username on Twitter and Instagram as well as his outstanding contributions to the company as a business developer. He has played a key role in driving the success of the business development team, using his excellent communication and negotiation skills to secure new partnerships and contracts for the company. ",
   },
   {
     name: "Patric Salvisberg",
