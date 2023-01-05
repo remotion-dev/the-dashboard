@@ -5,8 +5,12 @@ import { useDate } from "./use-date";
 
 const item: React.CSSProperties = {
   fontFamily: "serif",
-  fontSize: 20,
+  fontSize: 28,
   listStyleType: "square",
+};
+
+const h3: React.CSSProperties = {
+  fontSize: 40,
 };
 
 export const Menu: React.FC = () => {
@@ -17,7 +21,7 @@ export const Menu: React.FC = () => {
   if (dayOfWeek === 5) {
     return (
       <div>
-        <h3>Fresh Fridays</h3>
+        <h3 style={h3}>Fresh Fridays</h3>
         <p style={item}>A new taste adventure every week! </p>
         <br></br>
       </div>
@@ -26,7 +30,7 @@ export const Menu: React.FC = () => {
   if (dayOfWeek === 4) {
     return (
       <div>
-        <h3>"Mit und ohne"</h3>
+        <h3 style={h3}>"Mit und ohne"</h3>
         <p style={item}>Herzhafte Kebabs aus ehrlichem Handwerk</p>
         <br></br>
         <ul style={{ marginLeft: 20 }}>
@@ -47,7 +51,7 @@ export const Menu: React.FC = () => {
   if (dayOfWeek === 3) {
     return (
       <div>
-        <h3>"Five Spice"</h3>
+        <h3 style={h3}>"Five Spice"</h3>
         <p style={item}>Experience the flavors of Thailand</p>
         <br></br>
         <ul style={{ marginLeft: 20 }}>
@@ -67,7 +71,7 @@ export const Menu: React.FC = () => {
   if (dayOfWeek === 2) {
     return (
       <div>
-        <h3>"Pasta Bazaar"</h3>
+        <h3 style={h3}>"Pasta Bazaar"</h3>
         <p style={item}>Delicious pasta dishes from all over the world!</p>
         <br></br>
 
@@ -89,7 +93,7 @@ export const Menu: React.FC = () => {
   if (dayOfWeek === 1) {
     return (
       <div>
-        <h3>"Roots of Himalaya"</h3>
+        <h3 style={h3}>"Roots of Himalaya"</h3>
         <p style={item}>
           Authentic Tibetan momos, straight from the roof of the world!
         </p>
