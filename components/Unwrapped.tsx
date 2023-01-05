@@ -1,24 +1,24 @@
+import { random } from "remotion";
 import { useEffect, useState } from "react";
 import { AbsoluteFill } from "remotion";
 import { useTheme } from "./theme";
+import { useDate } from "./use-date";
 
 export const Unwrapped = () => {
-  const [data, setData] = useState({ renders: 0 });
+  const [data, setStars] = useState(0);
+  const date = useDate();
   const theme = useTheme();
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      fetch("https://www.githubunwrapped.com/api/videos")
-        .then((res) => res.json())
-        .then((res) => {
-          setData(res);
-        });
-    }, 2000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [data]);
+    fetch(`https://api.github.com/repos/remotion-dev/remotion`)
+      .then((res) => res.json())
+      .then((json) => json.watchers)
+      .then((w) => setStars(w))
+      .catch((err) => {
+        console.log(err);
+        setStars(0);
+      });
+  }, []);
 
   return (
     <div
@@ -37,9 +37,20 @@ export const Unwrapped = () => {
         style={{
           fontWeight: "bold",
           fontFamily: "sans-serif",
+          fontSize: 30,
         }}
       >
-        LIVE COUNTER
+        <div
+          style={{
+            display: "inline-block",
+            height: 25,
+            width: 25,
+            backgroundColor: "red",
+            borderRadius: 15,
+            marginRight: 10,
+          }}
+        ></div>
+        LIVE
       </div>
       <div
         style={{
@@ -48,15 +59,32 @@ export const Unwrapped = () => {
           lineHeight: 1,
         }}
       >
-        {data.renders}
+        {data}
       </div>
       <p
         style={{
-          fontSize: 20,
+          fontSize: 30,
         }}
       >
-        videos have been served to our wonderful users.
+        {target(data, date)}
       </p>
     </div>
   );
+};
+
+export const target = (currentStars: number, date: string) => {
+  return [
+    `Can we reach ${Math.round(
+      currentStars + random(date) * 500
+    )} before the end of the month?`,
+    `Can we reach ${Math.round(
+      currentStars + random(date) * 100
+    )} before the end of the week?`,
+    `This is great. We are stars!`,
+    `These developers are true stars!`,
+    `Those people are stars!`,
+    `So many stars!`,
+    `Keep on starring!`,
+    ``,
+  ];
 };
