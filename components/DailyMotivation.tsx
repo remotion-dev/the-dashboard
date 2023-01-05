@@ -22,11 +22,11 @@ export const DailyMotivation = () => {
       }}
     >
       <img src="/light.png" style={{ height: 80, float: "left" }}></img>
-      <h3>INSIGHT OF THE DAY</h3>
+      <h3>WISDOM OF THE DAY</h3>
       <p
         style={{
           fontFamily: "serif",
-          fontSize: 30,
+          fontSize: 34,
           marginTop: 10,
         }}
       >
@@ -36,6 +36,7 @@ export const DailyMotivation = () => {
         style={{
           clear: "left",
           marginTop: 20,
+          fontSize: 24,
         }}
       >
         – {quote.from}
