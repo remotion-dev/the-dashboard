@@ -12,18 +12,18 @@ const getFrequentD = () =>
 
 export const useDate = (frequency: "daily" | "hourly") => {
   const [date, setTheme] = useState<string>(() =>
-    frequency === "daily" ? getFrequentD() : getD()
+    frequency === "hourly" ? getFrequentD() : getD()
   );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTheme(getD());
+      setTheme(frequency === "hourly" ? getFrequentD() : getD());
     }, 1000 * 5);
 
     return () => {
       clearInterval(interval);
     };
-  }, [date]);
+  }, [date, frequency]);
 
   return date;
 };
