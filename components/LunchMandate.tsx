@@ -14,9 +14,9 @@ export const LunchMandate = () => {
   });
 
   const taglines = [
-    "We trust in",
+    "The selected one",
     "What an honor!",
-    "We have nominated:",
+    "Nomination",
     "We have a winner!",
   ].sort((a, b) => {
     return random(date + a + company) - random(date + company + b);
