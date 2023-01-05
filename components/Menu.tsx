@@ -14,7 +14,7 @@ const h3: React.CSSProperties = {
 };
 
 export const Menu: React.FC = () => {
-  const date = useDate();
+  const date = useDate("daily");
   const dayOfWeek = new Date(date).getDay();
   const company = useCompany();
 

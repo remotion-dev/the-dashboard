@@ -45,7 +45,7 @@ function truthy<T>(value: T): value is Truthy<T> {
 
 export const Ticker: React.FC = () => {
   const theme = useTheme();
-  const date = useDate();
+  const date = useDate("hourly");
   const company = useCompany();
   const employees = useEmployees();
 
