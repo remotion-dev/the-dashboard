@@ -27,7 +27,9 @@ export const CorporateAnnouncements = () => {
       ></img>
       <div style={{ width: 20 }}></div>
       <b style={{ fontSize: 30 }}>Message from the CEO</b>
-      <p style={{ marginRight: 30, fontSize: 24 }}>
+      <br></br>
+      <br></br>
+      <p style={{ marginRight: 30, fontSize: 36 }}>
         {bossQuotes[Math.floor(random(date + company) * bossQuotes.length)]}
       </p>
     </div>
