@@ -5,7 +5,7 @@ import { useDate } from "./use-date";
 
 const item: React.CSSProperties = {
   fontFamily: "serif",
-  fontSize: 28,
+  fontSize: 24,
   listStyleType: "square",
 };
 
@@ -41,13 +41,14 @@ export const Menu: React.FC = () => {
         <p
           style={{
             textAlign: "right",
+            fontSize: 24,
           }}
         >
-          <b>{company === "foronered" ? "0.00" : "14.50"}</b>
+          <b>CHF {company === "foronered" ? "0.00" : "14.50"}</b>
         </p>
         <br></br>
         <img
-          style={{ height: 200, marginRight: 20, float: "left" }}
+          style={{ height: 150, marginRight: 20, float: "left" }}
           src="doner.webp"
         ></img>
         <div
