@@ -45,6 +45,18 @@ export const Menu: React.FC = () => {
         >
           <b>{company === "foronered" ? "0.00" : "14.50"}</b>
         </p>
+        <br></br>
+        <img
+          style={{ height: 200, marginRight: 20, float: "left" }}
+          src="doner.webp"
+        ></img>
+        <div
+          style={{
+            fontSize: 36,
+          }}
+        >
+          "en guete!"
+        </div>
       </div>
     );
   }
