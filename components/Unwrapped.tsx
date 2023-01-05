@@ -6,7 +6,7 @@ import { useDate } from "./use-date";
 
 export const Unwrapped = () => {
   const [data, setStars] = useState(0);
-  const date = useDate();
+  const date = useDate("hourly");
   const theme = useTheme();
 
   useEffect(() => {

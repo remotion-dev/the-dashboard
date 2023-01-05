@@ -8,7 +8,7 @@ import { useDate } from "./use-date";
 
 export const Eotm: React.FC = () => {
   const theme = useTheme();
-  const date = useDate();
+  const date = useDate("daily");
   const month = date.substring(5, 7);
   const company = useCompany();
 

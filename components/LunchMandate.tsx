@@ -5,7 +5,7 @@ import { useTheme } from "./theme";
 import { useDate } from "./use-date";
 
 export const LunchMandate = () => {
-  const date = useDate();
+  const date = useDate("daily");
   const theme = useTheme();
   const company = useCompany();
 

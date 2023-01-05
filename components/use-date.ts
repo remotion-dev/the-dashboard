@@ -5,8 +5,15 @@ const getD = () =>
     new Date().getMonth() + 1
   }-${new Date().getDate()}`;
 
-export const useDate = () => {
-  const [date, setTheme] = useState<string>(() => getD());
+const getFrequentD = () =>
+  `${new Date().getFullYear()}-${
+    new Date().getMonth() + 1
+  }-${new Date().getDate()}-${new Date().getHours()}`;
+
+export const useDate = (frequency: "daily" | "hourly") => {
+  const [date, setTheme] = useState<string>(() =>
+    frequency === "daily" ? getFrequentD() : getD()
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
