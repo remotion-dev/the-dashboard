@@ -107,3 +107,16 @@ a {
     color-scheme: dark;
   }
 }
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 30s linear infinite;
+}
