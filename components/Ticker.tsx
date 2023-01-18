@@ -36,6 +36,7 @@ const randomMessages = [
   "Tip: Maintain a good posture to avoid back pain later in your life.",
   "We beat our Q4 KPIs! Great. Keep it going, crew!",
   "Let's bulldoze through these issues, guys.",
+  "Wear your For One Red hoodie every day.",
 ];
 
 type Truthy<T> = T extends false | "" | 0 | null | undefined ? never : T;
