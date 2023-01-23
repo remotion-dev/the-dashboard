@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "./theme";
 
 const row: React.CSSProperties = {
   display: "flex",
@@ -11,6 +12,7 @@ const row: React.CSSProperties = {
 const Key: React.FC<{
   keyRingColor: string;
 }> = ({ keyRingColor }) => {
+  const theme = useTheme();
   return (
     <div style={row}>
       <div
@@ -42,6 +44,7 @@ const Key: React.FC<{
           marginLeft: -10,
           borderTopRightRadius: 30,
           borderBottomRightRadius: 30,
+          color: theme.color,
         }}
       ></div>
     </div>
