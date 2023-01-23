@@ -12,6 +12,7 @@ import { Unwrapped } from "./Unwrapped";
 import { useCompany } from "./company";
 import { Stocks } from "./Stocks";
 import { useEffect } from "react";
+import { RoomColors } from "./RoomColors";
 
 export default function Home() {
   const theme = useTheme();
@@ -85,7 +86,7 @@ export default function Home() {
                   display: "flex",
                 }}
               >
-                <Stocks type="sp500"></Stocks>
+                <RoomColors></RoomColors>
                 <div style={{ height: 20 }}></div>
                 <Stocks type="bitcoin"></Stocks>
               </div>
