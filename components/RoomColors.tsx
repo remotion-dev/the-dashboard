@@ -19,7 +19,7 @@ const Key: React.FC<{
           width: 50,
           backgroundColor: "silver",
           borderRadius: 500,
-          border: "4px solid " + keyRingColor,
+          border: "8px solid " + keyRingColor,
         }}
       >
         <div
@@ -28,7 +28,7 @@ const Key: React.FC<{
             width: 12,
             backgroundColor: "white",
             borderRadius: 7.5,
-            marginTop: 15,
+            marginTop: 11,
             marginLeft: 8,
           }}
         ></div>
@@ -52,7 +52,7 @@ export const RoomColors: React.FC = () => {
   return (
     <div>
       <div style={row}>
-        <Key keyRingColor="#efe100"></Key>
+        <Key keyRingColor="orange"></Key>
         Second office
       </div>
       <br></br>
