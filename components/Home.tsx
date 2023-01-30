@@ -3,7 +3,6 @@ import { useTheme } from "./theme";
 import { Header } from "./Header";
 import { Line } from "./Line";
 import { Ticker } from "./Ticker";
-import { Lunch } from "./Lunch";
 import { Eotm } from "./Eotm";
 import { LunchMandate } from "./LunchMandate";
 import { DailyMotivation } from "./DailyMotivation";
