@@ -90,8 +90,6 @@ export default function Home() {
                 <div style={{ height: 20 }}></div>
                 <Stocks type="bitcoin"></Stocks>
               </div>
-              <div style={{ width: 20 }}></div>
-              <Lunch></Lunch>
             </div>
           </div>
           <div style={{ height: 20 }}></div>
