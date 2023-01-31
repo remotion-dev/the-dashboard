@@ -43,17 +43,16 @@ export const WatchingYou = () => {
           display: "flex",
           width: 720,
           flexDirection: "column",
-          gap: 24,
         }}
       >
         <h1
           style={{
-            marginBottom: 5,
+            marginBottom: 80,
           }}
         >
           {positive > 0.5 ? 'Congrats on your' : 'Watch your'} KPIs {person1[1].name.split(" ")[0]}, you are {performance}% {positive > 0.5 ? 'ahead of' : 'behind'}  your peers.
         </h1>
-        <h4 style = {{fontWeight: 'bold'}}>
+        <h4 style = {{fontWeight: 'bold', marginBottom: 24}}>
           Use the following key-takeaway from our last performance workshop
         </h4>
         <h3>
