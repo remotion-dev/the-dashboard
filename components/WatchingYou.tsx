@@ -29,9 +29,7 @@ const randomMotivation = [
 export const WatchingYou = () => {
   const date = useDate("daily");
 
-  const person1 = lunchRoulette.sort((a, b) => {
-    return random(date + a.name) - random(date + b.name);
-  });
+  const employeeNr = Math.floor(random(date) * 50 +20)
 
   const performance = Math.floor(random(date)*50)
 
@@ -47,13 +45,13 @@ export const WatchingYou = () => {
       >
         <h1
           style={{
-            marginBottom: 80,
+            marginBottom: 40,
           }}
         >
-          {positive > 0.5 ? 'Congrats on your' : 'Watch your'} KPIs {person1[1].name.split(" ")[0]}, you are {performance}% {positive > 0.5 ? 'ahead of' : 'behind'}  your peers.
+          {positive > 0.5 ? 'Congrats on your' : 'Watch your'} KPIs employee #{employeeNr}, you are {performance}% {positive > 0.5 ? 'ahead of' : 'behind'}  your peers.
         </h1>
-        <h2 style = {{fontWeight: 'bold', marginBottom: 24}}>
-          Use the following key-takeaway from our last performance workshop
+        <h2 style = {{fontWeight: 'bold', marginBottom: 24, color: 'grey'}}>
+          Use the following key-takeaway from our last performance workshop:
         </h2>
         <h2>
         {`👍 ${randomMotivation[performance % 11]}`}
