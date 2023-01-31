@@ -37,6 +37,7 @@ const randomMessages = [
   "We beat our Q4 KPIs! Great. Keep it going, crew!",
   "Let's bulldoze through these issues, guys.",
   "Wear your For One Red hoodie every day.",
+  "Employee #235, #456 and #112, proceed to the CEOs office ASAP",
 ];
 
 type Truthy<T> = T extends false | "" | 0 | null | undefined ? never : T;

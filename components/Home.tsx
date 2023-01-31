@@ -12,6 +12,7 @@ import { useCompany } from "./company";
 import { Stocks } from "./Stocks";
 import { useEffect } from "react";
 import { RoomColors } from "./RoomColors";
+import { WatchingYou } from "./WatchingYou";
 
 export default function Home() {
   const theme = useTheme();
@@ -76,6 +77,7 @@ export default function Home() {
               }}
             >
               <Eotm></Eotm>
+              <WatchingYou />
               <div style={{ width: 20 }}></div>
               <div
                 style={{
