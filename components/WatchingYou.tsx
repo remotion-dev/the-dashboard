@@ -41,17 +41,11 @@ export const WatchingYou = () => {
       <div
         style={{
           display: "flex",
+          width: 720,
           flexDirection: "column",
+          gap: 24,
         }}
       >
-        <img
-          style={{
-            width: '100%',
-            marginRight: 20,
-          }}
-          src={'1984.png'}
-        />
-
         <h1
           style={{
             marginBottom: 5,
@@ -59,6 +53,12 @@ export const WatchingYou = () => {
         >
           {positive > 0.5 ? 'Congrats on your' : 'Watch your'} KPIs {person1[1].name.split(" ")[0]}, you are {performance}% {positive > 0.5 ? 'ahead of' : 'behind'}  your peers.
         </h1>
+        <h4 style = {{fontWeight: 'bold'}}>
+          Use the following key-takeaway from our last performance workshop
+        </h4>
+        <h3>
+        {`👍 ${randomMotivation[performance % 11]}`}
+        </h3>
     </div>
     </div>
 
