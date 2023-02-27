@@ -10,7 +10,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const data = await fetch(
-    "https://query2.finance.yahoo.com/v8/finance/chart/BTC-USD"
+    "https://query2.finance.yahoo.com/v8/finance/chart/ETH-USD"
   );
   const response = await data.json();
 
