@@ -18,7 +18,7 @@ export const LunchMandate = () => {
 
   // Mit&Ohne must already be ordered by 10:30 AM,
   // Therefore the lunchmaster reveal date is earlier on Thursday.
-  const reveal = dayOfWeek === 4 ? ([10, 0] as const) : ([10, 30] as const);
+  const reveal = [11, 0] as const;
   const company = useCompany();
 
   const taglines = ["Too late!", "Ordered!", "Locked in!"].sort((a, b) => {
@@ -41,16 +41,18 @@ export const LunchMandate = () => {
         }}
       >
         <svg
+          className="rotate"
+          xmlns="http://www.w3.org/2000/svg"
           style={{
             height: 150,
           }}
-          className="rotate"
-          viewBox="0 0 512 512"
+          viewBox="0 0 640 512"
         >
-          <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM256 336c-18 0-32 14-32 32s13.1 32 32 32c17.1 0 32-14 32-32S273.1 336 256 336zM289.1 128h-51.1C199 128 168 159 168 198c0 13 11 24 24 24s24-11 24-24C216 186 225.1 176 237.1 176h51.1C301.1 176 312 186 312 198c0 8-4 14.1-11 18.1L244 251C236 256 232 264 232 272V288c0 13 11 24 24 24S280 301 280 288V286l45.1-28c21-13 34-36 34-60C360 159 329 128 289.1 128z" />
+          <path d="M96 24c0 26.5 10.5 38.7 25.9 56.1l.4 .4C138.8 99 160 122.9 160 168c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-26.5-10.5-38.7-25.9-56.1l-.4-.4C69.2 93 48 69.1 48 24C48 10.7 58.7 0 72 0S96 10.7 96 24zm112 0c0 26.5 10.5 38.7 25.9 56.1l.4 .4C250.8 99 272 122.9 272 168c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-26.5-10.5-38.7-25.9-56.1l-.4-.4C181.2 93 160 69.1 160 24c0-13.3 10.7-24 24-24s24 10.7 24 24zm208 88c50.7 0 93.6 33.7 107.4 80H308.6c13.8-46.3 56.6-80 107.4-80zM61.7 320H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H49.9c-.2-17.5 14-32 31.7-32H526.4c17.7 0 31.9 14.5 31.7 32H576c17.7 0 32 14.3 32 32s-14.3 32-32 32H546.3c-20.6 64-66.1 116.7-124.7 147.2l-1.2 9.7c-2.5 20-19.5 35-39.7 35H227.3c-20.2 0-37.2-15-39.7-35l-1.2-9.7C127.8 436.7 82.3 384 61.7 320z" />
         </svg>
         <br></br>
-        The lunch master will be revealed at {reveal[0]}:{reveal[1]} AM.
+        {"Don't"} forget to order lunch at zwoelfi.com until {reveal[0]}:
+        {reveal[1].toString().padEnd(2, "0")} AM!
       </div>
     );
   }
