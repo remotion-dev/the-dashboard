@@ -38,7 +38,7 @@ export const Stocks: React.FC<{
           fontSize: 30,
         }}
       >
-        {type === "sp500" ? "S&P 500" : "Bitcoin"}
+        {type === "sp500" ? "S&P 500" : "Credit Suisse"}
       </div>
       <h1 style={{ marginTop: 6, fontSize: 70 }}>
         {price}{" "}
