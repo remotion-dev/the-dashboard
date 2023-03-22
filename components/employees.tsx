@@ -48,10 +48,6 @@ export const forOneRedEmployees: Employee[] = [
       "Luisa was named employee of the month for her exceptional work performance and ability to handle any situation with poise and grace. She consistently delivers high-quality work on time, and is always willing to go above and beyond to meet project deadlines. In addition to her technical expertise, Luisa is known for her ability to handle difficult situations with calmness and professionalism. She has a great attitude and is always willing to lend a helping hand to her colleagues. Her contributions and positive attitude have been invaluable to the development team, and we are proud to recognize her as our employee of the month.",
   },
   {
-    name: "Jakob Dhondt",
-    picture: "jakob.jpeg",
-    employeeOfTheMonth:
-      "Jakob was named employee of the month for his outstanding contributions to the company as a network and cloud specialist. He has played a key role in helping the company transition to remote work, using his expertise in cloud computing and network infrastructure to set up and maintain a secure and efficient remote work environment. His technical skills have been invaluable in ensuring that the company's systems are running smoothly, and he is always willing to go above and beyond to help his colleagues and resolve any issues that may arise. Jakob's dedication and hard work have been instrumental in helping the company succeed, and we are proud to recognize him as our employee of the month.",
   },
 ];
 
