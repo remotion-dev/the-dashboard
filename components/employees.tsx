@@ -2,7 +2,7 @@ type Employee = {
   name: string;
   picture: string;
   employeeOfTheMonth: string;
-  birthday: [number, number] | null;
+  birthday: [number, number];
 };
 
 export const forOneRedEmployees: Employee[] = [
@@ -72,7 +72,7 @@ export const forOneRedEmployees: Employee[] = [
   {
     name: "Maria Pavlou",
     picture: "maria.jpeg",
-    birthday: null,
+    birthday: [27, 9],
     employeeOfTheMonth:
       "As a photographer, Tomas has an eye for detail and composition that is truly remarkable. He is able to capture the essence of a product or brand in his photos, and his work has been used in numerous marketing campaigns to great effect. In addition to his photography skills, Tomas is also an expert videographer who is able to create compelling video content that engages viewers and tells a story. His videos have been used in various marketing campaigns and have received high praise from clients and colleagues.",
   },
