@@ -14,7 +14,15 @@ export const Eotm: React.FC = () => {
 
   const arr = company === "foronered" ? forOneRedEmployees : remotionEmployees;
 
-  const randomEmployee = arr[Math.floor(random(month) * arr.length)];
+  const hasBirthday = arr.find(
+    (a) =>
+      a.birthday &&
+      a.birthday[0] === new Date().getDate() &&
+      a.birthday[1] === new Date().getMonth() + 1
+  );
+
+  const randomEmployee =
+    hasBirthday ?? arr[Math.floor(random(month) * arr.length)];
 
   return (
     <div
@@ -36,21 +44,33 @@ export const Eotm: React.FC = () => {
         }}
         src={randomEmployee.picture}
       ></img>
-      <h3 style={{ color: "blue" }}>Employee of the month</h3>
-      <h1>{randomEmployee.name}</h1>
-      <h3>
-        {new Intl.DateTimeFormat("en-US", {
-          month: "long",
-          year: "numeric",
-        }).format(new Date(date))}
+      <h3 style={{ color: "blue" }}>
+        {hasBirthday ? "Happy birthday" : "Employee of the month"}
       </h3>
+      <h1>{randomEmployee.name}</h1>
+      {hasBirthday ? null : (
+        <h3>
+          {new Intl.DateTimeFormat("en-US", {
+            month: "long",
+            year: "numeric",
+          }).format(new Date(date))}
+        </h3>
+      )}
       <br></br>
       <p
         style={{
           fontSize: 24,
         }}
       >
-        {randomEmployee.employeeOfTheMonth}
+        {hasBirthday
+          ? `The management at ${
+              company === "foronered"
+                ? "For One Red corporation"
+                : "Remotion Corporation"
+            } would like to extend the congratulations to our valued colleague ${
+              randomEmployee.name
+            } on their birthday. `
+          : randomEmployee.employeeOfTheMonth}
       </p>
     </div>
   );
