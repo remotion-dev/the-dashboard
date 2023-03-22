@@ -21,16 +21,7 @@ export const LunchMandate = () => {
   const reveal = dayOfWeek === 4 ? ([10, 0] as const) : ([10, 30] as const);
   const company = useCompany();
 
-  const lunchMandate = lunchRoulette.sort((a, b) => {
-    return random(date + a.name) - random(date + b.name);
-  });
-
-  const taglines = [
-    "The selected one",
-    "What an honor!",
-    "Nomination",
-    "We have a winner!",
-  ].sort((a, b) => {
+  const taglines = ["Too late!", "Ordered!", "Locked in!"].sort((a, b) => {
     return random(date + a + company) - random(date + company + b);
   });
 
@@ -67,39 +58,10 @@ export const LunchMandate = () => {
   return (
     <div style={container}>
       <em>{taglines[0]}</em>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "flex-end",
-        }}
-      >
-        <img
-          style={{
-            height: 150,
-            marginRight: 20,
-          }}
-          src={lunchMandate[0].picture}
-        ></img>
-
-        <h1
-          style={{
-            marginBottom: 5,
-          }}
-        >
-          {lunchMandate[0].name}
-        </h1>
-      </div>
       <br></br>
-      <div>
-        <div>
-          <strong> has been delegated to pick up lunch today.</strong>
-        </div>{" "}
-        <br></br>
-        {lunchMandate[1].name.split(" ")[0]},{" "}
-        {lunchMandate[2].name.split(" ")[0]} and{" "}
-        {lunchMandate[3].name.split(" ")[0]} have been nominated as deputies.
-      </div>
+      <br></br>
+      <p>The lunch ordering window has been closed for today.</p>
+      <p>En guete!</p>
     </div>
   );
 };
