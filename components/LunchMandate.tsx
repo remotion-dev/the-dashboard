@@ -9,7 +9,7 @@ const container: React.CSSProperties = {
   color: "black",
   background: "#eee",
   padding: 20,
-  fontSize: 24,
+  fontSize: 40,
 };
 
 export const LunchMandate = () => {
