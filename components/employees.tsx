@@ -67,14 +67,14 @@ export const forOneRedEmployees: Employee[] = [
     picture: "tomas.jpeg",
     birthday: [4, 6],
     employeeOfTheMonth:
-      "Maria Pavlou has been recognized as the Employee of the Month at For One Red due to her exceptional skills as a Greek illustrator and UI designer. She has consistently demonstrated a keen eye for detail and an ability to create stunning visuals that are both aesthetically pleasing and functional. Maria's work as a UI designer has been particularly noteworthy, as she has a talent for creating intuitive and user-friendly interfaces that make complex tasks seem simple. Her designs have received high praise from clients and users alike, and have contributed to the success of many projects at For One Red.",
+      "As a photographer, Tomas has an eye for detail and composition that is truly remarkable. He is able to capture the essence of a product or brand in his photos, and his work has been used in numerous marketing campaigns to great effect. In addition to his photography skills, Tomas is also an expert videographer who is able to create compelling video content that engages viewers and tells a story. His videos have been used in various marketing campaigns and have received high praise from clients and colleagues.",
   },
   {
     name: "Maria Pavlou",
     picture: "maria.jpeg",
     birthday: [27, 9],
     employeeOfTheMonth:
-      "As a photographer, Tomas has an eye for detail and composition that is truly remarkable. He is able to capture the essence of a product or brand in his photos, and his work has been used in numerous marketing campaigns to great effect. In addition to his photography skills, Tomas is also an expert videographer who is able to create compelling video content that engages viewers and tells a story. His videos have been used in various marketing campaigns and have received high praise from clients and colleagues.",
+      "Maria Pavlou has been recognized as the Employee of the Month at For One Red due to her exceptional skills as a Greek illustrator and UI designer. She has consistently demonstrated a keen eye for detail and an ability to create stunning visuals that are both aesthetically pleasing and functional. Maria's work as a UI designer has been particularly noteworthy, as she has a talent for creating intuitive and user-friendly interfaces that make complex tasks seem simple. Her designs have received high praise from clients and users alike, and have contributed to the success of many projects at For One Red.",
   },
 ];
 
