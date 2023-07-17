@@ -76,13 +76,6 @@ export const forOneRedEmployees: Employee[] = [
     employeeOfTheMonth:
       "As a photographer, Tomas has an eye for detail and composition that is truly remarkable. He is able to capture the essence of a product or brand in his photos, and his work has been used in numerous marketing campaigns to great effect. In addition to his photography skills, Tomas is also an expert videographer who is able to create compelling video content that engages viewers and tells a story. His videos have been used in various marketing campaigns and have received high praise from clients and colleagues.",
   },
-  {
-    name: "Fernando Jusdado",
-    picture: "fernando.jpeg",
-    birthday: [30, 4],
-    employeeOfTheMonth:
-      "Fernando Jusdado has been recognized as the Employee of the Month due to his outstanding work and positive attitude at For One Red. Fernando's experience working at CERN, one of the world's most renowned research institutions, has given him a deep understanding of complex technical concepts, which he brings to bear in his work as a member of the For One Red team.",
-  },
 ];
 
 export const remotionEmployees: Employee[] = [
